@@ -1,8 +1,10 @@
 const express = require("express");
 
 const app = express();
+
 app.get("/", (req, res) => {
-  console.log("from express");
   res.status(200);
-  res.json({ message: "hello" });
+  res.json({ message: "you're at the root" });
 });
+
+module.exports = app;
