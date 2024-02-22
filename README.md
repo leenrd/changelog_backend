@@ -17,6 +17,8 @@ The changelog application is a modern web system designed to effectively manage 
 - **PostgreSQL Database:**
   - Stores changelog entries, user data, and any other necessary information.
   - Leverages relational database features for structured data storage.
+    Database Schema: w/ prisma orm
+    ![alt text](/docs/image.png)
 
 ### API
 
@@ -34,6 +36,3 @@ The changelog application is a modern web system designed to effectively manage 
 
 - **Containerization:**
   - Docker containers for packaging the application, simplifying deployment across different environments.
-
-Database Schema: w/ prisma orm
-![alt text](/docs/image.png)
