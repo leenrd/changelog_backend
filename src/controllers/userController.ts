@@ -30,4 +30,4 @@ const signInUser = async (req, res) => {
   res.json({ token });
 };
 
-export { createUser };
+export { createUser, signInUser };
