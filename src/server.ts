@@ -4,7 +4,6 @@ import morgan from "morgan";
 import cors from "cors";
 import { routeProtection } from "./auth/auth";
 import helmet from "helmet";
-import user_router from "./routes/userRoutes";
 
 const app = express();
 
@@ -24,7 +23,6 @@ app.get("/", (req: Request, res: Response) => {
 
 app.use("/api", routeProtection, product_router);
 app.use("/api", routeProtection, rn_router);
-app.use("", routeProtection, update_router);
-app.use("", routeProtection, user_router);
+app.use("/api", routeProtection, update_router);
 
 export default app;
