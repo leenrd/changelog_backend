@@ -18,7 +18,8 @@ The changelog application is a modern web system designed to effectively manage 
   - Stores changelog entries, user data, and any other necessary information.
   - Leverages relational database features for structured data storage.
     Database Schema: w/ prisma orm
-    ![alt text](/docs/image.png)
+
+![alt text](/docs/image.png)
 
 ### API
 
