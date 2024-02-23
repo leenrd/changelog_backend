@@ -1,6 +1,13 @@
 import { Router } from "express";
 import { body } from "express-validator";
 import { errorHandler } from "../utils/validatorMiddleware";
+import {
+  getAllProducts,
+  getProductById,
+  updateProductById,
+  deleteProductById,
+  addProduct,
+} from "../controllers/productController";
 import { error } from "console";
 
 const product_router = Router();
