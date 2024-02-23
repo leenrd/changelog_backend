@@ -1,4 +1,5 @@
 import express, { Request, Response } from "express";
+import { createUser, signInUser } from "./controllers/userController";
 import { product_router, rn_router, update_router } from "./routes";
 import morgan from "morgan";
 import cors from "cors";
@@ -24,5 +25,9 @@ app.get("/", (req: Request, res: Response) => {
 app.use("/api", routeProtection, product_router);
 app.use("/api", routeProtection, rn_router);
 app.use("/api", routeProtection, update_router);
+
+// user routes
+app.post("/user", createUser);
+app.post("/signin", signInUser);
 
 export default app;
