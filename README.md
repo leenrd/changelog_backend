@@ -2,7 +2,9 @@
 
 Express application w/ Typescript + Postgres for DB, Prisma for ORM, and served using Docker
 
-> [CAUTION]: The routes have'nt been fully tested yet.
+> [!Important]
+>
+> The routes and database schema are subject to change, and the application is not yet fully tested.
 
 ## Architecture
 
