@@ -116,8 +116,6 @@ const addUpdate = async (req, res) => {
     return res.status(500).json({ error: "Product not found" });
   }
 
-  const { title, body } = req.body;
-
   try {
     const update = await prisma.update.create({
       data: req.body,
