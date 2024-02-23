@@ -25,6 +25,11 @@ product_router.put(
 
 product_router.delete("/product/:id", () => {});
 
-product_router.post("/product", () => {});
+product_router.post(
+  "/product",
+  body("name").isString(),
+  errorHandler,
+  (req, res) => {}
+);
 
 export default product_router;
