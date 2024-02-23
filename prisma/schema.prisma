@@ -65,4 +65,5 @@ model ReleaseNote {
 
   updateId String
   update   Update @relation(fields: [updateId], references: [id])
+  @@unique([id, updateId])
 }
