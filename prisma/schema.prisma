@@ -52,6 +52,7 @@ model Update {
   productId    String
   product      Product        @relation(fields: [productId], references: [id])
   releaseNotes ReleaseNote[]
+  @@unique([id, productId])
 }
 
 model ReleaseNote {
