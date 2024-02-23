@@ -51,7 +51,7 @@ const updateReleaseNotesById = async (req, res) => {
     const rn_s = update.reduce((allReleaseNotes, rn) => {
       return [...allReleaseNotes, ...rn.releaseNotes];
     }, []);
-    const match = rn_s.find((update) => update.id === id);
+    const match = rn_s.find((rs) => rs.id === id);
 
     if (!match) {
       return res.json({ message: "no match found" });
@@ -85,7 +85,7 @@ const deleteReleaseNotesById = async (req, res) => {
     const rn_s = update.reduce((allReleaseNotes, rn) => {
       return [...allReleaseNotes, ...rn.releaseNotes];
     }, []);
-    const match = rn_s.find((update) => update.id === id);
+    const match = rn_s.find((rs) => rs.id === id);
 
     if (!match) {
       return res.json({ message: "no match found" });
@@ -103,7 +103,27 @@ const deleteReleaseNotesById = async (req, res) => {
   }
 };
 
-const addReleaseNotes = async (req, res) => {};
+const addReleaseNotes = async (req, res) => {
+  const update = await prisma.update.findUnique({
+    where: {
+      id: req.user.id,
+    },
+  });
+
+  if (!update) {
+    return res.status(500).json({ error: "Product not found" });
+  }
+
+  try {
+    const releaseNote = await prisma.releaseNote.create({
+      data: req.body,
+    });
+    res.json({ data: releaseNote });
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+};
 
 export {
   getAllReleaseNotes,
