@@ -8,35 +8,32 @@ import {
   deleteProductById,
   addProduct,
 } from "../controllers/productController";
-import { error } from "console";
 
 const product_router = Router();
 
-product_router.get("/product", (req, res) => {
-  res.json({ message: "Hello World" });
-});
+product_router.get("/product", getAllProducts);
 
 product_router.get(
   "/product/:id",
   body("name").isString(),
   errorHandler,
-  (req, res) => {}
+  getProductById
 );
 
 product_router.put(
   "/product/:id",
   body("name").isString(),
   errorHandler,
-  (req, res) => {}
+  updateProductById
 );
 
-product_router.delete("/product/:id", () => {});
+product_router.delete("/product/:id", deleteProductById);
 
 product_router.post(
   "/product",
   body("name").isString(),
   errorHandler,
-  (req, res) => {}
+  addProduct
 );
 
 export default product_router;

@@ -59,6 +59,7 @@ const deleteProductById = async (req, res) => {
 };
 
 const addProduct = async (req, res) => {
+  console.log(req.user.id);
   const product = await prisma.product.create({
     data: {
       name: req.body.name,
