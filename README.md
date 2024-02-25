@@ -38,7 +38,7 @@ The changelog application is a modern web system designed to effectively manage 
   - Implements JWT for secure user authentication.
   - Provides access tokens for authorized users to interact with the application.
 
-## Deployment: inProgress
+### Deployment: inProgress
 
 - **Containerization:**
   - Docker containers for packaging the application, simplifying deployment across different environments.
