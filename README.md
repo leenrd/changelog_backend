@@ -10,8 +10,6 @@ Express application w/ Typescript + Postgres for DB, Prisma for ORM, and served 
 
 The changelog application is a modern web system designed to effectively manage and document updates made to an Express.js application, leveraging PostgreSQL as the backend database.
 
-![alt text](/docs/Screenshot%202024-02-22%20181830.png)
-
 ### Backend
 
 - **Express.js w/ Typescript:**
@@ -26,23 +24,8 @@ The changelog application is a modern web system designed to effectively manage 
 
 ![alt text](/docs/image.png)
 
-### API
-
-- **RESTful API:**
-  - Follows RESTful principles for clear and standardized communication between the frontend and backend.
-  - Endpoints include functionalities for creating, updating, and retrieving changelog entries.
-
-### Authentication:
-
-- **JWT (JSON Web Tokens):**
-  - Implements JWT for secure user authentication.
-  - Provides access tokens for authorized users to interact with the application.
 
 > [!Note]
 >
 > #### **_The docker image is not yet fully tested, and may contain bugs._**
 
-### Deployment:
-
-- **Containerization:**
-  - Docker containers for packaging the application, simplifying deployment across different environments.
